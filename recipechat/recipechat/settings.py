@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'main.apps.MainConfig',
     'user.apps.UserConfig',
     'chat.apps.ChatConfig',
     'django.contrib.admin',
@@ -83,6 +82,9 @@ DATABASES = {
     }
 }
 
+# UserModel
+
+AUTH_USER_MODEL = "user.CustomUser"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
