@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from kivy.app import App 
 from kivy.uix.widget import Widget
 from kivy.properties import StringProperty 
@@ -9,7 +8,7 @@ from kivy.lang import Builder
 import japanize_kivy
 
 # sample.kvを読み込む
-Builder.load_file('chat/test.kv')
+Builder.load_file('./test.kv')
 
 # Windowの背景色を変更 (黒 → 白)
 Window.clearcolor = (1, 1, 1, 1)
@@ -27,7 +26,12 @@ class Sample(Widget):
     def callback(self, **kwargs):
         # 呼び出された際に、textの値を更新
         self.text = 'kivy : 基礎学習'
-
-def build(self):
-    # ウィジェットクラスを返す
+# メインクラス
+class Test(App):
+    def build(self):
+        # ウィジェットクラスを返す
         return Sample()
+
+if __name__ == "__main__":
+    # アプリを起動
+    Test().run()
