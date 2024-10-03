@@ -1,0 +1,11 @@
+#:kivy 0.5.5
+<MyLayout>:
+    orientation: 'vertical'
+    Label:
+        id: label
+        text: 'Click the button to get data from Django API'
+        font_size: 32
+    Button:
+        text: 'Get Data'
+        font_size: 32
+        on_press: root.get_data_from_api()
